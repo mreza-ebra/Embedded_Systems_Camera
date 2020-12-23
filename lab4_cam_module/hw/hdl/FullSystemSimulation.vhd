@@ -11,15 +11,17 @@ entity FullSystem is
 
         -- Internal interface (i.e. Avalon slave).
         address : in std_logic_vector(2 downto 0);
-        write : in std_logic;
         read : in std_logic;
         writedata : in std_logic_vector(31 downto 0);
         readdata : out std_logic_vector(31 downto 0);
 
         -- Outputs to the debayerisation module
-        outputAcq: out std_logic_vector(31 downto 0);	
-	    word32count: out STD_LOGIC_VECTOR (8 DOWNTO 0);
-        empty: out std_logic   
+        MasterOutput: out std_logic_vector(31 downto 0);	
+	    --word32count: out STD_LOGIC_VECTOR (8 DOWNTO 0);
+        empty: out std_logic;
+	-- master signals
+	write_master : out std_logic;
+	BurstCount : out std_logic_vector(7 downto 0)
     );
 
 end FullSystem;
@@ -30,7 +32,7 @@ architecture Testing of FullSystem is
 	 constant PIX_DEPTH : positive := 12;
 	 constant MAX_WIDTH : positive := 640;
      constant MAX_HEIGHT : positive := 480;
-    
+     
      signal FVAL : std_logic;    
      signal RVAL : std_logic;
      signal DATA : std_logic_vector(11 downto 0);
@@ -38,7 +40,6 @@ architecture Testing of FullSystem is
      signal output2: std_logic_vector(23 downto 0);
      signal output_deb: std_logic_vector(35 downto 0);
      signal readyin: std_logic;
-     signal rdreq: std_logic;
      signal readyOut: std_logic;
      signal full: std_logic;
      signal outputColor: std_logic_vector(31 downto 0);
@@ -48,6 +49,13 @@ architecture Testing of FullSystem is
      signal StartAddress : std_logic_vector(31 downto 0);
      signal LengthAddress : std_logic_vector(31 downto 0);
      signal ModuleStatus : std_logic_vector(31 downto 0) := x"00000000";
+	 -- Master Signals
+	 signal ReadFifo : std_logic;
+	 signal write : std_logic;
+	 signal MasterWriteData : std_logic_vector(31 downto 0);
+	 signal FifoWords : std_logic_vector(8 downto 0);
+	 constant CBURST : STD_LOGIC_VECTOR(7 downto 0) := X"50";
+	 signal WaitReq : std_logic;
 
      --Add the CMOS simulator
      component cmos_sensor_output_generator is
@@ -150,6 +158,25 @@ architecture Testing of FullSystem is
 	    usedw		: OUT STD_LOGIC_VECTOR (8 DOWNTO 0)
 	);
     end component;
+
+    component Avalon_Master is
+	generic(CBURST : STD_LOGIC_VECTOR(7 downto 0)); -- burst count generic value is 80
+	PORT
+	(
+	    clk : IN STD_LOGIC ;
+        Reset : IN STD_LOGIC ;
+
+        StartAddr : IN STD_LOGIC_VECTOR(31 downto 0); -- the starting address of the data in the correct buffer
+        WaitReq : IN STD_LOGIC; -- if slave keeps this activated, we don't transer anything (or bus)
+        Length : IN STD_LOGIC_VECTOR(31 downto 0);
+        FifoWords : IN STD_LOGIC_VECTOR(8 downto 0);
+        ReadFifo : OUT STD_LOGIC;
+        MemAddr : OUT STD_LOGIC_VECTOR(31 downto 0); -- starting address of buffer
+        write_master : OUT STD_LOGIC;
+        MasterWriteData : OUT STD_LOGIC_VECTOR(31 downto 0); -- we write 32 bit data with burst transfer
+        BurstCount : OUT STD_LOGIC_VECTOR(7 downto 0)
+	);
+    end component;
  
 
 begin
@@ -158,8 +185,8 @@ begin
     StreamerUnit: Streamer port map (clk=>clk, Reset=>Reset, PIXCLK=>clk, FVAL=>FVAL, RVAL=>RVAL, DATA=>DATA, output1=>output1, output2=>output2, ready=>readyin);
     DebayerUnit:  Debayer port map (clk=>clk, input1=>output1, input2=>output2, readyin=>readyin, readyout=>readyout, output=>output_deb);
     ColorUnit: Color_Converter port map(clk=>clk, nReset=>n_Reset, OrgData=>output_deb, ReadyDebayer=>readyout, CvtData=>outputColor, ReadyOutColor=>ReadyOutColor);    
-    SecondFifo: FIFO_32512 port map(clock=>clk, data=>outputColor, rdreq=>rdreq, wrreq=>ReadyOutColor,q=>outputAcq, empty=>empty, full=>full, usedw=>word32count);
-
+    SecondFifo: FIFO_32512 port map(clock=>clk, data=>outputColor, rdreq=>ReadFifo, wrreq=>ReadyOutColor,q=>MasterWriteData, empty=>empty, full=>full, usedw=>FifoWords);
+    MasterUnit: Avalon_Master generic map (CBURST=>CBURST) port map(clk=>clk, Reset=>Reset, FifoWords=>FifoWords, StartAddr=>StartAddress, Length=>LengthAddress, MasterWriteData=>MasterOutput, ReadFifo=>ReadFifo, write_master=>write_master, BurstCount=>BurstCount, WaitReq=>WaitReq); --take care of WaitReq
     
     -- Avalon slave write to registers.
     process(clk, Reset)

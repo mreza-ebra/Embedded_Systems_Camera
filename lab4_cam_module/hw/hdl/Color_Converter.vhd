@@ -16,7 +16,7 @@ Entity Color_Converter is
 
     -- Input to the module is only a 36 bit data (we assume 64)
         OrgData : IN STD_LOGIC_VECTOR(35 downto 0);
-	ReadyDebayer : IN STD_LOGIC;
+		ReadyDebayer : IN STD_LOGIC;
 
     -- Output is the converted data with 16 bits
         CvtData : OUT STD_LOGIC_VECTOR(31 downto 0);
@@ -35,51 +35,51 @@ Begin
 
     Process(clk, nReset)
 	Variable Iterator : Integer := 0; --used as FOR loop iterator
-    	Variable Counter : Integer := 0; -- the index of the target register
+    Variable Counter : Integer := 0; -- the index of the target register
 	Variable OrgDumData : STD_LOGIC_VECTOR(35 downto 0); -- only take the lower 36 bits in a dummy data	
 	Variable CvtDataDum : STD_LOGIC_VECTOR(17 downto 0); -- changes until the correct result
 	Variable datalsb : STD_LOGIC_VECTOR(15 downto 0);
 	Variable datamsb : STD_LOGIC_VECTOR(15 downto 0);
-        variable dcount : natural  range 0 to 2 := 0; -- a counter for contacenating purpose
+    Variable dcount : natural  range 0 to 2 := 0; -- a counter for contacenating purpose
 	Variable wholedata : STD_LOGIC := '0';  
 
 	Begin
-            if nReset = '0' then
-                OrgDumData := (others => '0');
-		Iterator := 0;
-		Counter := 0;
-		ReadyOutColor <= '0';
-		dcount := 0;
-		wholedata := '0';
-            -- What if one clock cycle is passed during the while loop    
-            elsif rising_edge(clk) then
-		ReadyOutColor <= '0';
-		if ReadyDebayer = '1' then 
-                    OrgDumData := OrgData;
-                    -- OR adjacent bits in the while loop
-                    while Iterator < FOR_MAX loop
-                        CvtDataDum(Counter) := OrgDumData(Iterator) or OrgDumData(Iterator+1);
-                        Iterator := Iterator + FOR_STEP;
-                        Counter := Counter + 1;
-                    end loop;
-		    dcount := dcount + 1;
-		    Iterator := 0;
-		    Counter := 0;
-		    if dcount = 1 then
-			datalsb := CvtDataDum(16 downto 1); -- here we chop off one LSB from B and one MSB from R
-                    elsif dcount = 2 then
-			datamsb := CvtDataDum(16 downto 1); -- here we chop off one LSB from B and one MSB from R
+        if nReset = '0' then
+			OrgDumData := (others => '0');
+			Iterator := 0;
+			Counter := 0;
+			ReadyOutColor <= '0';
 			dcount := 0;
-			wholedata := '1';
-		    end if;
-		    
-		    if wholedata = '1' then
-			CvtData <= datamsb & datalsb;
-			ReadyOutColor <= '1';
 			wholedata := '0';
-		    end if;
-            	end if;
-	     end if; 
+            -- What if one clock cycle is passed during the while loop    
+        elsif rising_edge(clk) then
+			ReadyOutColor <= '0';
+			if ReadyDebayer = '1' then 
+				OrgDumData := OrgData;
+			-- OR adjacent bits in the while loop
+				while Iterator < FOR_MAX loop
+					CvtDataDum(Counter) := OrgDumData(Iterator) or OrgDumData(Iterator+1);
+					Iterator := Iterator + FOR_STEP;
+					Counter := Counter + 1;
+				end loop;
+				dcount := dcount + 1;
+				Iterator := 0;
+				Counter := 0;
+				if dcount = 1 then
+					datalsb := CvtDataDum(16 downto 1); -- here we chop off one LSB from B and one MSB from R
+				elsif dcount = 2 then
+					datamsb := CvtDataDum(16 downto 1); -- here we chop off one LSB from B and one MSB from R
+					dcount := 0;
+					wholedata := '1';
+				end if;
+				
+				if wholedata = '1' then
+					CvtData <= datamsb & datalsb;
+					ReadyOutColor <= '1';
+					wholedata := '0';
+				end if;
+			end if;
+	    end if; 
     End Process;
 
 end comp;
