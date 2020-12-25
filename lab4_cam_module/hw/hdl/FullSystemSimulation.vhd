@@ -11,6 +11,7 @@ entity FullSystem is
 
         -- Internal interface (i.e. Avalon slave).
         address : in std_logic_vector(2 downto 0);
+		write : in std_logic;
         read : in std_logic;
         writedata : in std_logic_vector(31 downto 0);
         readdata : out std_logic_vector(31 downto 0);
@@ -21,6 +22,7 @@ entity FullSystem is
         empty: out std_logic;
 	-- master signals
 	write_master : out std_logic;
+	WaitReq : in std_logic;
 	BurstCount : out std_logic_vector(7 downto 0)
     );
 
@@ -46,16 +48,14 @@ architecture Testing of FullSystem is
      signal ReadyOutColor: std_logic;
      signal n_Reset: std_logic;
      --register signals
-     signal StartAddress : std_logic_vector(31 downto 0);
-     signal LengthAddress : std_logic_vector(31 downto 0);
+     signal StartAddress : std_logic_vector(31 downto 0):= x"00000000";
+     signal LengthAddress : std_logic_vector(31 downto 0):= x"00010000";
      signal ModuleStatus : std_logic_vector(31 downto 0) := x"00000000";
 	 -- Master Signals
 	 signal ReadFifo : std_logic;
-	 signal write : std_logic;
 	 signal MasterWriteData : std_logic_vector(31 downto 0);
 	 signal FifoWords : std_logic_vector(8 downto 0);
-	 constant CBURST : STD_LOGIC_VECTOR(7 downto 0) := X"50";
-	 signal WaitReq : std_logic;
+	 constant CBURST : STD_LOGIC_VECTOR(7 downto 0) := X"03";
 
      --Add the CMOS simulator
      component cmos_sensor_output_generator is

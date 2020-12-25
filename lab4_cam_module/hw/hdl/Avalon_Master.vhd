@@ -10,7 +10,7 @@ use ieee.numeric_std.all;
 Entity Avalon_Master is
 
     generic(
-    CBURST : STD_LOGIC_VECTOR(7 downto 0) := x"50"); -- burst count generic value is 80
+    CBURST : STD_LOGIC_VECTOR(7 downto 0) := x"03"); -- burst count generic value is 80
  
     Port(
         clk : IN STD_LOGIC ;
@@ -33,7 +33,7 @@ Entity Avalon_Master is
         MemAddr : OUT STD_LOGIC_VECTOR(31 downto 0); -- starting address of buffer
     --ByteEnable : OUT STD_LOGIC_VECTOR(3 downto 0);
         write_master : OUT STD_LOGIC;
-        Masterwrite_masterData : OUT STD_LOGIC_VECTOR(31 downto 0); -- we write_master 32 bit data with burst transfer
+        MasterWriteData : OUT STD_LOGIC_VECTOR(31 downto 0); -- we write_master 32 bit data with burst transfer
         BurstCount : OUT STD_LOGIC_VECTOR(7 downto 0)
     ) ;
 
@@ -45,7 +45,7 @@ Architecture Comp of Avalon_Master is
     signal burst_mode : STD_LOGIC := '0';
     signal istate : STD_LOGIC := '0';
     signal burst_ready : STD_LOGIC := '0';
-    constant offset : STD_LOGIC_VECTOR(11 downto 0) := X"140"; -- offset is 80*4 = 320 or X"140"
+    constant offset : STD_LOGIC_VECTOR(11 downto 0) := X"00C"; -- offset is 80*4 = 320 or X"140"
 
 Begin    
     Process(clk, Reset)
@@ -66,11 +66,11 @@ Begin
 				write_master <= '0';
 			end if;
 			-- are we ready for a burst
-			if FifoWords >= CBURST and burst_mode ='0' then -- we have enough words in FIFO
+			if FifoWords(7 downto 0) >= CBURST and burst_mode ='0' then -- we have enough words in FIFO
 				BurstCount <= CBURST;
 				write_master <= '1';
 				burst_ready <= '1';
-			elsif FifoWords < CBURST and burst_mode ='0' then
+			elsif FifoWords(7 downto 0) < CBURST and burst_mode ='0' then
 				BurstCount <= (others => '0');
 				write_master <= '0';
 			end if;

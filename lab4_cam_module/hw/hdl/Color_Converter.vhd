@@ -34,8 +34,8 @@ Architecture Comp of Color_Converter is
 Begin
 
     Process(clk, nReset)
-	Variable Iterator : Integer := 0; --used as FOR loop iterator
-    Variable Counter : Integer := 0; -- the index of the target register
+	Variable Iterator : natural := 0; --used as FOR loop iterator
+    Variable Counter : natural := 0; -- the index of the target register
 	Variable OrgDumData : STD_LOGIC_VECTOR(35 downto 0); -- only take the lower 36 bits in a dummy data	
 	Variable CvtDataDum : STD_LOGIC_VECTOR(17 downto 0); -- changes until the correct result
 	Variable datalsb : STD_LOGIC_VECTOR(15 downto 0);

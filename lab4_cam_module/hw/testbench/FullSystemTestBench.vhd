@@ -3,10 +3,10 @@ use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
 use work.cmos_sensor_output_generator_constants.all;
 
-entity FullSystemTestBenh is
-end FullSystemTestBenh;
+entity FullSystemTestBench is
+end FullSystemTestBench;
 
-architecture sim of FullSystemTestBenh is
+architecture sim of FullSystemTestBench is
 	constant CLK_PERIOD : time := 20 ns;
 	signal sim_finished : boolean := false;
 	constant PIX_DEPTH : positive := 12;
@@ -30,9 +30,14 @@ architecture sim of FullSystemTestBenh is
 	signal frame_valid : std_logic;
     signal line_valid  : std_logic;
     signal data        : std_logic_vector(PIX_DEPTH - 1 downto 0);
-    signal outputAcq : std_logic_vector(31 downto 0);	
+    signal MasterOutput : std_logic_vector(31 downto 0);	
     signal word32count: STD_LOGIC_VECTOR (8 DOWNTO 0);
     signal empty: std_logic;
+    
+    signal write_master : std_logic;
+    signal BurstCount : std_logic_vector(7 downto 0);
+    signal WaitReq : std_logic;
+
 begin 
 
 	--Instantiate DUT
@@ -45,9 +50,10 @@ begin
 			 write => write,
 			 readdata => rddata,
              writedata => wrdata,
-             outputAcq => outputAcq,
-             word32count => word32count,
-             empty => empty);
+             MasterOutput => MasterOutput,
+             BurstCount => BurstCount,
+             empty => empty,
+	     WaitReq => WaitReq);
 
 	--Generate clk signal
 	clk_generation: process
@@ -80,9 +86,11 @@ begin
 		wait for 1*CLK_PERIOD;
         --Configure the registers
         write <= '1';
+	read <= '0';
+	WaitReq <= '0';
         addr <= CMOS_SENSOR_OUTPUT_GENERATOR_CONFIG_FRAME_WIDTH_OFST;
 		--wrdata <= x"00000280";
-		wrdata <= x"00000004";
+		wrdata <= x"00000008";
         wait for 1*CLK_PERIOD;
         write <= '0';
         wait for 1*CLK_PERIOD;
@@ -90,7 +98,7 @@ begin
         write <= '1';
         addr <= CMOS_SENSOR_OUTPUT_GENERATOR_CONFIG_FRAME_HEIGHT_OFST;
 		--wrdata <= x"000001E0";
-		wrdata <= x"00000006";
+		wrdata <= x"0000000C";
         wait for 1*CLK_PERIOD;
         write <= '0';
         wait for 1*CLK_PERIOD;
@@ -116,7 +124,34 @@ begin
         wrdata <= x"00000001";
         wait for 1*CLK_PERIOD;
         write <= '0';
-        wait for 200*CLK_PERIOD;       
+	wait for 1*CLK_PERIOD;
+	--write <= '1';
+        --addr <= "000";
+        --wrdata <= x"00000000";
+	--wait for 1*CLK_PERIOD;
+        --write <= '0';
+	--wait for 1*CLK_PERIOD;
+	--write <= '1';
+	--addr <= "001";
+        --wrdata <= x"00001000";
+	--wait for 1*CLK_PERIOD;
+	--write <= '0';
+	wait for 1*CLK_PERIOD;
+	read <= '1';
+        addr <= "000";
+	wait for 1*CLK_PERIOD;
+        read <= '0';
+	wait for 1*CLK_PERIOD;
+	read <= '1';
+	addr <= "001";
+	wait for 1*CLK_PERIOD;
+	read <= '0';
+        wait for 10*CLK_PERIOD;
+	read <= '1';
+	addr <= "010";
+	wait for 1*CLK_PERIOD;
+	read <= '0';
+	wait for 190*CLK_PERIOD;       
 		sim_finished <= true;
 		wait;
 	end process simulation;

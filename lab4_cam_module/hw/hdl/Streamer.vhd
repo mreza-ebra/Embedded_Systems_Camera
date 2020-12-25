@@ -1,6 +1,6 @@
 library ieee;
-    use ieee.std_logic_1164.all;
-    use ieee.numeric_std.all;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
 
 entity Streamer is
     --Takes as input the FVAL, RVAL, PIXCLK and DATA signals from the camera module,
@@ -96,7 +96,7 @@ begin
                     --No row is being outputted
                 end if;
             else    
-                if pixel_num = 4 then --Completed a row --To be changed accordingly
+                if pixel_num = 8 then --Completed a row --To be changed accordingly
                     --Reset pixel counter
                     pixel_num := 0;
                     --Increment row counter
@@ -107,7 +107,7 @@ begin
             end if;
         else
             --No Frame is being outputted  
-            if row_num = 5 then --To be changed accordingly
+            if row_num = 11 then --To be changed accordingly
                 --Completed a frame
                 --Reset row counter
                 row_num := 0;
