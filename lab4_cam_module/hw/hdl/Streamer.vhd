@@ -107,7 +107,7 @@ begin
             end if;
         else
             --No Frame is being outputted  
-            if row_num = 11 then --To be changed accordingly
+            if row_num > 12 then --To be changed accordingly
                 --Completed a frame
                 --Reset row counter
                 row_num := 0;
