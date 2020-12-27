@@ -15,15 +15,6 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Compiling entity FIFO24320
 -- Compiling architecture SYN of fifo24320
 
-} {} {}} C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd
-Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
--- Loading package STANDARD
--- Loading package TEXTIO
--- Loading package std_logic_1164
--- Loading package NUMERIC_STD
--- Compiling entity Streamer
--- Compiling architecture Stream of Streamer
-
 } {} {}} C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
 -- Loading package STANDARD
@@ -43,6 +34,17 @@ Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  
 -- Loading package STD_LOGIC_UNSIGNED
 -- Compiling entity Debayer
 -- Compiling architecture Debayrization of Debayer
+
+} {} {}} C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FullSystemSimulation.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\HP\Desktop\EmbeddedSystemsProject\Github\Embedded_Systems_Camera\lab4_cam_module\hw\hdl\FullSystemSimulation.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package cmos_sensor_output_generator_constants
+-- Compiling entity FullSystem
+-- Compiling architecture Testing of FullSystem
 
 } {} {}} C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd
 Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016

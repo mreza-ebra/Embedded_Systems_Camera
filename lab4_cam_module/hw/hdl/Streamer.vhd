@@ -59,8 +59,10 @@ begin
 
     --Writing to FIFOs
     process(clk, Reset)
-    variable row_num: natural range 0 to 479 := 0;
-    variable pixel_num: natural range 0 to 639 := 0;
+    variable row_num: natural range 0 to 3000 := 0;
+    variable pixel_num: natural range 0 to 3000 := 0;
+    variable ROW: natural range 0 to 3000 := 12; --Enter the row number
+    variable PIXEL: natural range 0 to 3000 := 8; --Enter the pixel number
 begin
     --Reset the signals
     if Reset = '1' then
@@ -96,7 +98,7 @@ begin
                     --No row is being outputted
                 end if;
             else    
-                if pixel_num = 8 then --Completed a row --To be changed accordingly
+                if pixel_num = PIXEL then --Completed a row --To be changed accordingly
                     --Reset pixel counter
                     pixel_num := 0;
                     --Increment row counter
@@ -107,7 +109,7 @@ begin
             end if;
         else
             --No Frame is being outputted  
-            if row_num > 12 then --To be changed accordingly
+            if row_num = (ROW-1) then --To be changed accordingly
                 --Completed a frame
                 --Reset row counter
                 row_num := 0;

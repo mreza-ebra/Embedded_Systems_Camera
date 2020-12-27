@@ -46,3 +46,97 @@ restart -f
 # ** Warning: (vsim-8683) Uninitialized out port /fullsystemtestbench/dut/MasterUnit/MasterWriteData(31 downto 0) has no driver.
 # This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
 run -all
+# Compile of FullSystemTestBench.vhd was successful.
+# Compile of Avalon_Master.vhd was successful.
+# Compile of cmos_sensor_output_generator.vhd was successful.
+# Compile of cmos_sensor_output_generator_constants.vhd was successful.
+# Compile of Color_Converter.vhd was successful.
+# Compile of DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd was successful.
+# Compile of DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd was successful.
+# Compile of Debayer.vhd was successful.
+# Compile of FIFO_32512.vhd was successful.
+# Compile of FIFO24320.vhd was successful.
+# Compile of FullSystemSimulation.vhd was successful.
+# Compile of Streamer.vhd was successful.
+# Compile of TrialIbrahimi.vhd was successful.
+# Compile of FullSystemTestBench.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.cmos_sensor_output_generator_constants(body)
+# Loading work.fullsystemtestbench(sim)
+# Loading work.fullsystem(testing)
+# Loading work.cmos_sensor_output_generator(rtl)
+# Loading work.streamer(stream)
+# Loading work.fifo24320(syn)
+# Loading work.debayer(debayrization)
+# Loading work.color_converter(comp)
+# Loading work.fifo_32512(syn)
+# Loading work.avalon_master(comp)
+# ** Warning: (vsim-8683) Uninitialized out port /fullsystemtestbench/dut/MasterUnit/MasterWriteData(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of Avalon_Master.vhd was successful.
+# Compile of cmos_sensor_output_generator.vhd was successful.
+# Compile of cmos_sensor_output_generator_constants.vhd was successful.
+# Compile of Color_Converter.vhd was successful.
+# Compile of DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd was successful.
+# Compile of DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd was successful.
+# Compile of Debayer.vhd was successful.
+# Compile of FIFO_32512.vhd was successful.
+# Compile of FIFO24320.vhd was successful.
+# Compile of FullSystemSimulation.vhd was successful.
+# Compile of Streamer.vhd was successful.
+# Compile of TrialIbrahimi.vhd was successful.
+# Compile of FullSystemTestBench.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.cmos_sensor_output_generator_constants(body)
+# Loading work.fullsystemtestbench(sim)
+# Loading work.fullsystem(testing)
+# Loading work.cmos_sensor_output_generator(rtl)
+# Loading work.streamer(stream)
+# Loading work.fifo24320(syn)
+# Loading work.debayer(debayrization)
+# Loading work.color_converter(comp)
+# Loading work.fifo_32512(syn)
+# Loading work.avalon_master(comp)
+# ** Warning: (vsim-8683) Uninitialized out port /fullsystemtestbench/dut/MasterUnit/MasterWriteData(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
+# Compile of Avalon_Master.vhd was successful.
+# Compile of cmos_sensor_output_generator.vhd was successful.
+# Compile of cmos_sensor_output_generator_constants.vhd was successful.
+# Compile of Color_Converter.vhd was successful.
+# Compile of DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd was successful.
+# Compile of DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd was successful.
+# Compile of Debayer.vhd was successful.
+# Compile of FIFO_32512.vhd was successful.
+# Compile of FIFO24320.vhd was successful.
+# Compile of FullSystemSimulation.vhd was successful.
+# Compile of Streamer.vhd was successful.
+# Compile of TrialIbrahimi.vhd was successful.
+# Compile of FullSystemTestBench.vhd was successful.
+# 13 compiles, 0 failed with no errors.
+restart -f
+# Loading work.cmos_sensor_output_generator_constants(body)
+# Loading work.fullsystemtestbench(sim)
+# Loading work.fullsystem(testing)
+# Loading work.cmos_sensor_output_generator(rtl)
+# Loading work.streamer(stream)
+# Loading work.fifo24320(syn)
+# Loading work.debayer(debayrization)
+# Loading work.color_converter(comp)
+# Loading work.fifo_32512(syn)
+# Loading work.avalon_master(comp)
+# ** Warning: (vsim-8683) Uninitialized out port /fullsystemtestbench/dut/MasterUnit/MasterWriteData(31 downto 0) has no driver.
+# This port will contribute value (UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU) to the signal network.
+run -all
+# GetModuleFileName: The specified module could not be found.
+# 
+# 
