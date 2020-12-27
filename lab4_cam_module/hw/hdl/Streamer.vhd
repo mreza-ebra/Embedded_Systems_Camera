@@ -68,6 +68,7 @@ begin
     if Reset = '1' then
         write_request1 <= '0';
         write_request2 <='0';
+
     elsif rising_edge(clk) then
         if FVAL = '1' then --Frame is being outputted
             if RVAL = '1' then --Row is being outputted
@@ -127,8 +128,8 @@ process(clk, Reset)
 begin
     --Reset the signals
     if Reset = '1' then
-        --read_request1 <= '0';
-        --read_request2 <= '0';
+        read_request1 <= '0';
+        read_request2 <= '0';
 
     elsif rising_edge(clk) then
         ready <='0'; --always kept low unless data is available
