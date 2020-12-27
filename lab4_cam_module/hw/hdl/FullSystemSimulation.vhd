@@ -132,7 +132,7 @@ architecture Testing of FullSystem is
     component Color_Converter is
         Port(
         clk : IN STD_LOGIC ;
-        nReset : IN STD_LOGIC ;
+        Reset : IN STD_LOGIC ;
 
     -- Input to the module is only a 36 bit data
         OrgData : IN STD_LOGIC_VECTOR(35 downto 0);
@@ -184,7 +184,7 @@ begin
     CameraUnit: cmos_sensor_output_generator generic map (PIX_DEPTH => PIX_DEPTH, MAX_WIDTH => MAX_WIDTH, MAX_HEIGHT => MAX_HEIGHT) port map (clk => clk, reset =>Reset, addr => address, read => read, write => write ,rddata =>readdata , wrdata =>writedata, frame_valid =>FVAL, line_valid=>RVAL, data =>DATA  );
     StreamerUnit: Streamer port map (clk=>clk, Reset=>Reset, PIXCLK=>clk, FVAL=>FVAL, RVAL=>RVAL, DATA=>DATA, output1=>output1, output2=>output2, ready=>readyin);
     DebayerUnit:  Debayer port map (clk=>clk, input1=>output1, input2=>output2, readyin=>readyin, readyout=>readyout, output=>output_deb);
-    ColorUnit: Color_Converter port map(clk=>clk, nReset=>n_Reset, OrgData=>output_deb, ReadyDebayer=>readyout, CvtData=>outputColor, ReadyOutColor=>ReadyOutColor);    
+    ColorUnit: Color_Converter port map(clk=>clk, Reset=>Reset, OrgData=>output_deb, ReadyDebayer=>readyout, CvtData=>outputColor, ReadyOutColor=>ReadyOutColor);    
     SecondFifo: FIFO_32512 port map(clock=>clk, data=>outputColor, rdreq=>ReadFifo, wrreq=>ReadyOutColor,q=>MasterWriteData, empty=>empty, full=>full, usedw=>FifoWords);
     MasterUnit: Avalon_Master generic map (CBURST=>CBURST) port map(clk=>clk, Reset=>Reset, FifoWords=>FifoWords, StartAddr=>StartAddress, Length=>LengthAddress, MasterWriteData=>MasterOutput, ReadFifo=>ReadFifo, write_master=>write_master, BurstCount=>BurstCount, WaitReq=>WaitReq); --take care of WaitReq
     

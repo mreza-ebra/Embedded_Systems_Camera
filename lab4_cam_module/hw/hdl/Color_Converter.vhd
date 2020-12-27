@@ -12,7 +12,7 @@ use ieee.numeric_std.all;
 Entity Color_Converter is
     Port(
         clk : IN STD_LOGIC ;
-        nReset : IN STD_LOGIC ;
+        Reset : IN STD_LOGIC ;
 
     -- Input to the module is only a 36 bit data (we assume 64)
         OrgData : IN STD_LOGIC_VECTOR(35 downto 0);
@@ -33,7 +33,7 @@ Architecture Comp of Color_Converter is
 
 Begin
 
-    Process(clk, nReset)
+    Process(clk, Reset)
 	Variable Iterator : natural := 0; --used as FOR loop iterator
     Variable Counter : natural := 0; -- the index of the target register
 	Variable OrgDumData : STD_LOGIC_VECTOR(35 downto 0); -- only take the lower 36 bits in a dummy data	
@@ -44,7 +44,7 @@ Begin
 	Variable wholedata : STD_LOGIC := '0';  
 
 	Begin
-        if nReset = '0' then
+        if Reset = '1' then
 			OrgDumData := (others => '0');
 			Iterator := 0;
 			Counter := 0;
