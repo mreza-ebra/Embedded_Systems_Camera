@@ -9,24 +9,24 @@ z2
 cModel Technology
 dC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl
 Eavalon_master
-Z0 w1609064570
+Z0 w1609079089
 Z1 DPx4 ieee 11 numeric_std 0 22 :ASDNFgHXf_ih3J@9F3Ze1
 Z2 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
 Z3 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
-Z4 dC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/modelsim
-Z5 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd
-Z6 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd
+Z4 dC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/modelsim
+Z5 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd
+Z6 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd
 l0
 L10
-VVGfTNQ3zF<;4>8Y992<Zc2
-!s100 ^4K>5JR6Z7zo[[4:7`J172
+Vj>PWgP?FL5ShgOQ8[08VH1
+!s100 z^TjOaZHIV:z>BG=Y?H4k0
 Z7 OV;C;10.5b;63
 32
-Z8 !s110 1609066281
+Z8 !s110 1609079254
 !i10b 1
-Z9 !s108 1609066281.000000
-Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd|
-Z11 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd|
+Z9 !s108 1609079254.000000
+Z10 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd|
+Z11 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Avalon_Master.vhd|
 !i113 1
 Z12 o-work work -2002 -explicit
 Z13 tExplicit 1 CvgOpt 0
@@ -34,11 +34,11 @@ Acomp
 R1
 R2
 R3
-DEx4 work 13 avalon_master 0 22 VGfTNQ3zF<;4>8Y992<Zc2
-l50
-L42
-VIQ^1Q[z7>NUXX>ZFeZGn11
-!s100 cLHoI_D18Gz7gi=oI]JF91
+DEx4 work 13 avalon_master 0 22 j>PWgP?FL5ShgOQ8[08VH1
+l51
+L43
+VXg3AHD9nHD^;Dk51mPgV<0
+!s100 R=fO<gOf_?idzFNH>MKZd1
 R7
 32
 R8
@@ -50,32 +50,32 @@ R11
 R12
 R13
 Ecmos_sensor_output_generator
-R0
-Z14 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
-Z15 DPx4 work 38 cmos_sensor_output_generator_constants 0 22 fgXUi?FhN[hO5_RK;BU5S2
+Z14 w1458952874
+Z15 DPx4 ieee 9 math_real 0 22 Sk6CSihbPL<f[^Shm]=KX0
+Z16 DPx4 work 38 cmos_sensor_output_generator_constants 0 22 fgXUi?FhN[hO5_RK;BU5S2
 R1
 R2
 R3
 R4
-Z16 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd
-Z17 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd
+Z17 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd
+Z18 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd
 l0
 L7
 V;W10=Bc[:LZIl^Zj;JTLb0
 !s100 C8`FK^G0k[;A4ZVEe856F3
 R7
 32
-R8
+Z19 !s110 1609078032
 !i10b 1
-R9
-Z18 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd|
-Z19 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd|
+Z20 !s108 1609078032.000000
+Z21 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd|
+Z22 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd|
 !i113 1
 R12
 R13
 Artl
-R14
 R15
+R16
 R1
 R2
 R3
@@ -86,22 +86,22 @@ V5eU7in2__5k992[2Rj]EY3
 !s100 S`Tklb>jdzB:R2PL9o?[]3
 R7
 32
-R8
-!i10b 1
-R9
-R18
 R19
+!i10b 1
+R20
+R21
+R22
 !i113 1
 R12
 R13
 Pcmos_sensor_output_generator_constants
-R14
+R15
 R2
 R3
-R0
+R14
 R4
-Z20 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd
-Z21 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd
+Z23 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd
+Z24 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd
 l0
 L5
 VfgXUi?FhN[hO5_RK;BU5S2
@@ -109,17 +109,17 @@ VfgXUi?FhN[hO5_RK;BU5S2
 R7
 32
 b1
-Z22 !s110 1609066282
+R19
 !i10b 1
-Z23 !s108 1609066282.000000
-Z24 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd|
-Z25 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd|
+R20
+Z25 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd|
+Z26 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd|
 !i113 1
 R12
 R13
 Bbody
+R16
 R15
-R14
 R2
 R3
 l0
@@ -128,33 +128,33 @@ VOWO9mdJc0gN`=z`_GFB`R0
 !s100 eeXazRcc0CWg81QXk5`XG2
 R7
 32
-R22
+R19
 !i10b 1
-R23
-R24
+R20
 R25
+R26
 !i113 1
 R12
 R13
 Ecolor_converter
-R0
+Z27 w1609066745
 R1
 R2
 R3
 R4
-Z26 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Color_Converter.vhd
-Z27 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Color_Converter.vhd
+Z28 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Color_Converter.vhd
+Z29 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Color_Converter.vhd
 l0
 L12
-V0PNCL=oCCgX9jHR^c]T3U3
-!s100 d99`WE0F>RRckZAD3KO441
+VH`;c[[_KJBZhJm`jen4iP1
+!s100 5hz9Cjjc`h[2d[g6o@KVf2
 R7
 32
-R22
+R19
 !i10b 1
-R23
-Z28 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Color_Converter.vhd|
-Z29 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Color_Converter.vhd|
+R20
+Z30 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Color_Converter.vhd|
+Z31 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Color_Converter.vhd|
 !i113 1
 R12
 R13
@@ -162,39 +162,39 @@ Acomp
 R1
 R2
 R3
-DEx4 work 15 color_converter 0 22 0PNCL=oCCgX9jHR^c]T3U3
+DEx4 work 15 color_converter 0 22 H`;c[[_KJBZhJm`jen4iP1
 l34
 L28
-VHGfBUh4d@mIT[I@dZVbcZ1
-!s100 Td1ad29dC;n:_FaS^N@EC1
+VUiUJYIHK_2j0>fgeL:UEW2
+!s100 `k[mo]U6ll9g>D9SDALV[0
 R7
 32
-R22
+R19
 !i10b 1
-R23
-R28
-R29
+R20
+R30
+R31
 !i113 1
 R12
 R13
 Ede0_nano_soc_trdb_d5m_lt24_top_level
-R0
+Z32 w1513179788
 R2
 R3
 R4
-Z30 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd
-Z31 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd
+Z33 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd
+Z34 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd
 l0
 L20
 VK?df[f`OUn;Z`5lQ_9a5J2
 !s100 bd4X6R`=@z^3FczSX;eI]1
 R7
 32
-R22
+R19
 !i10b 1
-R23
-Z32 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd|
-Z33 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd|
+R20
+Z35 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd|
+Z36 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_LT24_top_level.vhd|
 !i113 1
 R12
 R13
@@ -208,32 +208,32 @@ V:CZSo>[SIVL3PYeDM@jRD2
 !s100 ZOL_E>7[ZAaL@@jgfYoGj3
 R7
 32
-R22
+R19
 !i10b 1
-R23
-R32
-R33
+R20
+R35
+R36
 !i113 1
 R12
 R13
 Ede0_nano_soc_trdb_d5m_vga_top_level
-R0
+R32
 R2
 R3
 R4
-Z34 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd
-Z35 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd
+Z37 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd
+Z38 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd
 l0
 L20
 V5g4CzNGLJLVG:?HH4eNW31
 !s100 WUik4VEJ[HZVnd<ZMDQeU2
 R7
 32
-R22
+Z39 !s110 1609078033
 !i10b 1
-R23
-Z36 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd|
-Z37 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd|
+R20
+Z40 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd|
+Z41 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/DE0_Nano_SoC_TRDB_D5M_VGA_top_level.vhd|
 !i113 1
 R12
 R13
@@ -247,41 +247,41 @@ V]SA^Xd75Jf2?cmUi@@PE70
 !s100 a5[noS>P6QfFMTQKCz7WL0
 R7
 32
-R22
+R39
 !i10b 1
-R23
-R36
-R37
+R20
+R40
+R41
 !i113 1
 R12
 R13
 Edebayer
-R0
-Z38 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
-Z39 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z42 w1607017757
+Z43 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z44 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
 R1
 R2
 R3
 R4
-Z40 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd
-Z41 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd
+Z45 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd
+Z46 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd
 l0
 L6
 VNfd:`KZ``66NZ9^f6G?Pg3
 !s100 17Wnl8lI_I^bzDba]DQ>A0
 R7
 32
-R22
+R39
 !i10b 1
-R23
-Z42 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd|
-Z43 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd|
+Z47 !s108 1609078033.000000
+Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd|
+Z49 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd|
 !i113 1
 R12
 R13
 Adebayrization
-R38
-R39
+R43
+R44
 R1
 R2
 R3
@@ -292,32 +292,32 @@ VgXoD=NQDMco<m>bY=:0eB1
 !s100 f=PhWO9_6gNVAjM@`Fj6;3
 R7
 32
-R22
+R39
 !i10b 1
-R23
-R42
-R43
+R47
+R48
+R49
 !i113 1
 R12
 R13
 Efifo24320
-R0
+Z50 w1606904604
 R2
 R3
 R4
-Z44 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd
-Z45 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd
+Z51 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd
+Z52 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd
 l0
 L42
 VDkf7`0kPO2@f@2cIog<KX0
 !s100 ??N9MQ2^^[KG1NhT5Rm_Z3
 R7
 32
-Z46 !s110 1609066283
+R39
 !i10b 1
-Z47 !s108 1609066283.000000
-Z48 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd|
-Z49 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd|
+R47
+Z53 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd|
+Z54 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd|
 !i113 1
 R12
 R13
@@ -331,32 +331,32 @@ VN0@AXTSXA95g=2T=BYC[O3
 !s100 9TbPGa:`YaUcZ>`OXMJVi3
 R7
 32
-R46
+R39
 !i10b 1
 R47
-R48
-R49
+R53
+R54
 !i113 1
 R12
 R13
 Efifo_32512
-R0
+Z55 w1607694434
 R2
 R3
 R4
-Z50 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO_32512.vhd
-Z51 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO_32512.vhd
+Z56 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO_32512.vhd
+Z57 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO_32512.vhd
 l0
 L42
 Vgdh[5eCTkJSC9KDndUZH13
 !s100 d`[H88=Zg^LgliR4MTiWf2
 R7
 32
-R22
+R39
 !i10b 1
-R23
-Z52 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO_32512.vhd|
-Z53 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO_32512.vhd|
+R47
+Z58 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO_32512.vhd|
+Z59 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO_32512.vhd|
 !i113 1
 R12
 R13
@@ -370,124 +370,124 @@ Vz_@zFITl_0kmY]IFInoHZ1
 !s100 >TGA7U[ca]AVbOz`:2j>80
 R7
 32
-R22
+R39
 !i10b 1
-R23
-R52
-R53
+R47
+R58
+R59
 !i113 1
 R12
 R13
 Efullsystem
-Z54 w1609065763
-R14
+Z60 w1609079396
 R15
+R16
 R1
 R2
 R3
 R4
-Z55 8C:\Users\HP\Desktop\EmbeddedSystemsProject\Github\Embedded_Systems_Camera\lab4_cam_module\hw\hdl\FullSystemSimulation.vhd
-Z56 FC:\Users\HP\Desktop\EmbeddedSystemsProject\Github\Embedded_Systems_Camera\lab4_cam_module\hw\hdl\FullSystemSimulation.vhd
+Z61 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FullSystemSimulation.vhd
+Z62 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FullSystemSimulation.vhd
 l0
 L5
 V2`Y13d?fHbDlfEZPbn6B41
 !s100 lL66@T@[MSI6;Ha[zg?Kl0
 R7
 32
-R46
+Z63 !s110 1609079403
 !i10b 1
-R47
-Z57 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:\Users\HP\Desktop\EmbeddedSystemsProject\Github\Embedded_Systems_Camera\lab4_cam_module\hw\hdl\FullSystemSimulation.vhd|
-Z58 !s107 C:\Users\HP\Desktop\EmbeddedSystemsProject\Github\Embedded_Systems_Camera\lab4_cam_module\hw\hdl\FullSystemSimulation.vhd|
+Z64 !s108 1609079403.000000
+Z65 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FullSystemSimulation.vhd|
+Z66 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FullSystemSimulation.vhd|
 !i113 1
 R12
 R13
 Atesting
-R14
 R15
+R16
 R1
 R2
 R3
-Z59 DEx4 work 10 fullsystem 0 22 2`Y13d?fHbDlfEZPbn6B41
+Z67 DEx4 work 10 fullsystem 0 22 2`Y13d?fHbDlfEZPbn6B41
 l182
 L31
-VKQc06GDF@DQ]NJ_^C6bLM2
-!s100 [ae:]mD7A]W1e4kKoUFcB2
+VYa6PIUCIRgE2R[8ko4A503
+!s100 P:^_QLYSD12cT1cPDlUB10
 R7
 32
-R46
+R63
 !i10b 1
-R47
-R57
-R58
+R64
+R65
+R66
 !i113 1
 R12
 R13
 Efullsystemtestbench
-R0
-R14
+Z68 w1609078079
 R15
+R16
 R1
 R2
 R3
 R4
-Z60 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd
-Z61 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd
+Z69 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd
+Z70 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd
 l0
 L6
 Vfk4PaYme40<;F^SNLinc91
 !s100 4fP6XLYecUJSn^dBk_k631
 R7
 32
-R46
+Z71 !s110 1609079262
 !i10b 1
-R47
-Z62 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd|
-Z63 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd|
+Z72 !s108 1609079262.000000
+Z73 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd|
+Z74 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd|
 !i113 1
 R12
 R13
 Asim
-R59
-R14
+R67
 R15
+R16
 R1
 R2
 R3
-Z64 DEx4 work 19 fullsystemtestbench 0 22 fk4PaYme40<;F^SNLinc91
+DEx4 work 19 fullsystemtestbench 0 22 fk4PaYme40<;F^SNLinc91
 l41
 L9
-Z65 VNoY]M1`m9;kJ];Inoc<f02
-Z66 !s100 DJcaPXjjcK?HP5jFEMmOA3
+VNoY]M1`m9;kJ];Inoc<f02
+!s100 DJcaPXjjcK?HP5jFEMmOA3
 R7
 32
-R46
+R71
 !i10b 1
-R47
-R62
-R63
+R72
+R73
+R74
 !i113 1
 R12
 R13
 Estreamer
-Z67 w1609066279
+Z75 w1609066520
 R1
 R2
 R3
 R4
-Z68 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd
-Z69 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd
+Z76 8C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd
+Z77 FC:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd
 l0
 L5
 VEhlDoYdeL4dHfhW3nkH=13
 !s100 2JzbbhF5kdn0OlN@H6z;U2
 R7
 32
-R46
+R19
 !i10b 1
-R47
-Z70 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd|
-Z71 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd|
+R20
+Z78 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd|
+Z79 !s107 C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd|
 !i113 1
 R12
 R13
@@ -502,33 +502,33 @@ VFYlKY>7gYM@NI1]F86DNO1
 !s100 V11imDIZ]I[b7`dg=X=oC3
 R7
 32
-R46
+R19
 !i10b 1
-R47
-R70
-R71
+R20
+R78
+R79
 !i113 1
 R12
 R13
 Etrial
-R0
+Z80 w1609064570
 R1
 R2
 R3
-R4
-Z72 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/TrialIbrahimi.vhd
-Z73 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/TrialIbrahimi.vhd
+Z81 dC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/modelsim
+Z82 8C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/TrialIbrahimi.vhd
+Z83 FC:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/TrialIbrahimi.vhd
 l0
 L5
 V6:Z<QX::0nePL]z`;U:803
 !s100 k0z<iC7CozSeVcbTagJJn2
 R7
 32
-R46
+Z84 !s110 1609066283
 !i10b 1
-R47
-Z74 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/TrialIbrahimi.vhd|
-Z75 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/TrialIbrahimi.vhd|
+Z85 !s108 1609066283.000000
+Z86 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/TrialIbrahimi.vhd|
+Z87 !s107 C:/Users/HP/Desktop/EmbeddedSystemsProject/Github/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/TrialIbrahimi.vhd|
 !i113 1
 R12
 R13
@@ -543,11 +543,11 @@ VX5RT]I7jO]Wb9WzXe1LE`2
 !s100 i5hC_TXaV[FFTZ0L@hN1P1
 R7
 32
-R46
+R84
 !i10b 1
-R47
-R74
-R75
+R85
+R86
+R87
 !i113 1
 R12
 R13

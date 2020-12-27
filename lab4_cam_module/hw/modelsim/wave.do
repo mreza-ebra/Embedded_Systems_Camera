@@ -10,8 +10,8 @@ add wave -noupdate /fullsystemtestbench/rddata
 add wave -noupdate /fullsystemtestbench/wrdata
 add wave -noupdate /fullsystemtestbench/dut/MasterUnit/StartAddr
 add wave -noupdate /fullsystemtestbench/dut/MasterUnit/Length
-add wave -noupdate /fullsystemtestbench/dut/MasterUnit/MasterWriteData
 add wave -noupdate /fullsystemtestbench/dut/SecondFifo/q
+add wave -noupdate /fullsystemtestbench/dut/Tmp
 add wave -noupdate /fullsystemtestbench/MasterOutput
 add wave -noupdate /fullsystemtestbench/BurstCount
 add wave -noupdate /fullsystemtestbench/dut/StreamerUnit/FVAL

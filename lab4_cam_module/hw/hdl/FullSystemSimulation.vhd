@@ -46,17 +46,16 @@ architecture Testing of FullSystem is
      signal full: std_logic;
      signal outputColor: std_logic_vector(31 downto 0);
      signal ReadyOutColor: std_logic;
-     signal n_Reset: std_logic;
+
      --register signals
      signal StartAddress : std_logic_vector(31 downto 0):= x"00000000";
      signal LengthAddress : std_logic_vector(31 downto 0):= x"00010000";
      signal ModuleStatus : std_logic_vector(31 downto 0) := x"00000000";
 	 -- Master Signals
 	 signal ReadFifo : std_logic;
-	 signal MasterWriteData : std_logic_vector(31 downto 0);
 	 signal FifoWords : std_logic_vector(8 downto 0);
 	 constant CBURST : STD_LOGIC_VECTOR(7 downto 0) := X"03";
-
+	signal Tmp : std_logic_vector(31 downto 0):= x"00000000";
      --Add the CMOS simulator
      component cmos_sensor_output_generator is
         generic(
@@ -174,6 +173,7 @@ architecture Testing of FullSystem is
         MemAddr : OUT STD_LOGIC_VECTOR(31 downto 0); -- starting address of buffer
         write_master : OUT STD_LOGIC;
         MasterWriteData : OUT STD_LOGIC_VECTOR(31 downto 0); -- we write 32 bit data with burst transfer
+	MasterIn : IN STD_LOGIC_VECTOR(31 downto 0);
         BurstCount : OUT STD_LOGIC_VECTOR(7 downto 0)
 	);
     end component;
@@ -185,8 +185,8 @@ begin
     StreamerUnit: Streamer port map (clk=>clk, Reset=>Reset, PIXCLK=>clk, FVAL=>FVAL, RVAL=>RVAL, DATA=>DATA, output1=>output1, output2=>output2, ready=>readyin);
     DebayerUnit:  Debayer port map (clk=>clk, input1=>output1, input2=>output2, readyin=>readyin, readyout=>readyout, output=>output_deb);
     ColorUnit: Color_Converter port map(clk=>clk, Reset=>Reset, OrgData=>output_deb, ReadyDebayer=>readyout, CvtData=>outputColor, ReadyOutColor=>ReadyOutColor);    
-    SecondFifo: FIFO_32512 port map(clock=>clk, data=>outputColor, rdreq=>ReadFifo, wrreq=>ReadyOutColor,q=>MasterWriteData, empty=>empty, full=>full, usedw=>FifoWords);
-    MasterUnit: Avalon_Master generic map (CBURST=>CBURST) port map(clk=>clk, Reset=>Reset, FifoWords=>FifoWords, StartAddr=>StartAddress, Length=>LengthAddress, MasterWriteData=>MasterOutput, ReadFifo=>ReadFifo, write_master=>write_master, BurstCount=>BurstCount, WaitReq=>WaitReq); --take care of WaitReq
+    SecondFifo: FIFO_32512 port map(clock=>clk, data=>outputColor, rdreq=>ReadFifo, wrreq=>ReadyOutColor,q=>Tmp, empty=>empty, full=>full, usedw=>FifoWords);
+    MasterUnit: Avalon_Master generic map (CBURST=>CBURST) port map(clk=>clk, Reset=>Reset, FifoWords=>FifoWords, StartAddr=>StartAddress, Length=>LengthAddress, MasterWriteData=>MasterOutput, ReadFifo=>ReadFifo, write_master=>write_master, BurstCount=>BurstCount, WaitReq=>WaitReq, MasterIn => Tmp); --take care of WaitReq
     
     -- Avalon slave write to registers.
     process(clk, Reset)

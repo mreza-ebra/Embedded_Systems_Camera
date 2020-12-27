@@ -34,6 +34,7 @@ Entity Avalon_Master is
     --ByteEnable : OUT STD_LOGIC_VECTOR(3 downto 0);
         write_master : OUT STD_LOGIC;
         MasterWriteData : OUT STD_LOGIC_VECTOR(31 downto 0); -- we write_master 32 bit data with burst transfer
+	MasterIn : IN STD_LOGIC_VECTOR(31 downto 0);
         BurstCount : OUT STD_LOGIC_VECTOR(7 downto 0)
     ) ;
 
@@ -58,6 +59,7 @@ Begin
 			istate <= '0';
 			burst_ready <= '0'; 
         elsif rising_edge(clk) then
+			MasterWriteData<=MasterIn;
 			-- initial state
 			if istate = '0' then -- if MemAddress is empty put startAddr in it
 				MemAddr <= StartAddr;
