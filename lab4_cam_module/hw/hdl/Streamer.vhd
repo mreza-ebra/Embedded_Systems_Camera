@@ -69,10 +69,10 @@ begin
         write_request1 <= '0';
         write_request2 <='0';
 
-    elsif rising_edge(clk) then
-        if FVAL = '1' then --Frame is being outputted
+    --elsif rising_edge(clk) then
+        elsif FVAL = '1' then --Frame is being outputted
             if RVAL = '1' then --Row is being outputted
-                if rising_edge(PIXCLK) then --Pixel data is being outputted
+                if falling_edge(PIXCLK) then --Pixel data is being outputted
                     --Increment pixel number
                     pixel_num := pixel_num + 1; 
                     if (pixel_num mod 2) = 0 then --It is the first chunk of the data_struct
@@ -119,7 +119,7 @@ begin
                 write_request2 <= '0';
             end if;
         end if;
-    end if;                         
+    --end if;                         
 end process;
 
 --   --Reading from FIFOs

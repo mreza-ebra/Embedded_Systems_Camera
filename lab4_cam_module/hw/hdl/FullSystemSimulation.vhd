@@ -1,7 +1,6 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-use work.cmos_sensor_output_generator_constants.all;
 entity FullSystem is
     --Takes as input the FVAL, RVAL, PIXCLK and DATA signals from the camera module, 
     --Outputs the debayerised data and an acknowledge signal

@@ -10,7 +10,7 @@ use ieee.numeric_std.all;
 Entity Avalon_Master is
 
     generic(
-    CBURST : STD_LOGIC_VECTOR(7 downto 0) := x"03"); -- burst count generic value is 80
+    CBURST : STD_LOGIC_VECTOR(7 downto 0) := x"28"); -- burst count generic value is 80
  
     Port(
         clk : IN STD_LOGIC ;
@@ -46,7 +46,7 @@ Architecture Comp of Avalon_Master is
     signal burst_mode : STD_LOGIC := '0';
     signal istate : STD_LOGIC := '0';
     signal burst_ready : STD_LOGIC := '0';
-    constant offset : STD_LOGIC_VECTOR(11 downto 0) := X"00C"; -- offset is 80*4 = 320 or X"140"
+    constant offset : STD_LOGIC_VECTOR(11 downto 0) := X"0A0"; -- offset is 40*4 = 160 or X"140"
 
 Begin    
     Process(clk, Reset)
