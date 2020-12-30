@@ -95,11 +95,15 @@ module soc_system (
 	wire  [28:0] nios2_gen2_0_instruction_master_address;                                 // nios2_gen2_0:i_address -> mm_interconnect_0:nios2_gen2_0_instruction_master_address
 	wire         nios2_gen2_0_instruction_master_read;                                    // nios2_gen2_0:i_read -> mm_interconnect_0:nios2_gen2_0_instruction_master_read
 	wire         nios2_gen2_0_instruction_master_readdatavalid;                           // mm_interconnect_0:nios2_gen2_0_instruction_master_readdatavalid -> nios2_gen2_0:i_readdatavalid
-	wire  [31:0] mm_interconnect_0_camera_controller_0_avalon_slave_readdata;             // camera_controller_0:readdata -> mm_interconnect_0:camera_controller_0_avalon_slave_readdata
-	wire   [2:0] mm_interconnect_0_camera_controller_0_avalon_slave_address;              // mm_interconnect_0:camera_controller_0_avalon_slave_address -> camera_controller_0:address
-	wire         mm_interconnect_0_camera_controller_0_avalon_slave_read;                 // mm_interconnect_0:camera_controller_0_avalon_slave_read -> camera_controller_0:read
-	wire         mm_interconnect_0_camera_controller_0_avalon_slave_write;                // mm_interconnect_0:camera_controller_0_avalon_slave_write -> camera_controller_0:write
-	wire  [31:0] mm_interconnect_0_camera_controller_0_avalon_slave_writedata;            // mm_interconnect_0:camera_controller_0_avalon_slave_writedata -> camera_controller_0:writedata
+	wire  [31:0] mm_interconnect_0_address_span_extender_0_windowed_slave_readdata;       // address_span_extender_0:avs_s0_readdata -> mm_interconnect_0:address_span_extender_0_windowed_slave_readdata
+	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_waitrequest;    // address_span_extender_0:avs_s0_waitrequest -> mm_interconnect_0:address_span_extender_0_windowed_slave_waitrequest
+	wire  [25:0] mm_interconnect_0_address_span_extender_0_windowed_slave_address;        // mm_interconnect_0:address_span_extender_0_windowed_slave_address -> address_span_extender_0:avs_s0_address
+	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_read;           // mm_interconnect_0:address_span_extender_0_windowed_slave_read -> address_span_extender_0:avs_s0_read
+	wire   [3:0] mm_interconnect_0_address_span_extender_0_windowed_slave_byteenable;     // mm_interconnect_0:address_span_extender_0_windowed_slave_byteenable -> address_span_extender_0:avs_s0_byteenable
+	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_readdatavalid;  // address_span_extender_0:avs_s0_readdatavalid -> mm_interconnect_0:address_span_extender_0_windowed_slave_readdatavalid
+	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_write;          // mm_interconnect_0:address_span_extender_0_windowed_slave_write -> address_span_extender_0:avs_s0_write
+	wire  [31:0] mm_interconnect_0_address_span_extender_0_windowed_slave_writedata;      // mm_interconnect_0:address_span_extender_0_windowed_slave_writedata -> address_span_extender_0:avs_s0_writedata
+	wire   [6:0] mm_interconnect_0_address_span_extender_0_windowed_slave_burstcount;     // mm_interconnect_0:address_span_extender_0_windowed_slave_burstcount -> address_span_extender_0:avs_s0_burstcount
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_chipselect;              // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_chipselect -> jtag_uart_0:av_chipselect
 	wire  [31:0] mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_readdata;                // jtag_uart_0:av_readdata -> mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_readdata
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_waitrequest;             // jtag_uart_0:av_waitrequest -> mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_waitrequest
@@ -107,6 +111,11 @@ module soc_system (
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read;                    // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_read -> jtag_uart_0:av_read_n
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write;                   // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_write -> jtag_uart_0:av_write_n
 	wire  [31:0] mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_writedata;               // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_writedata -> jtag_uart_0:av_writedata
+	wire  [31:0] mm_interconnect_0_camera_controller_0_avalon_slave_readdata;             // camera_controller_0:readdata -> mm_interconnect_0:camera_controller_0_avalon_slave_readdata
+	wire   [2:0] mm_interconnect_0_camera_controller_0_avalon_slave_address;              // mm_interconnect_0:camera_controller_0_avalon_slave_address -> camera_controller_0:address
+	wire         mm_interconnect_0_camera_controller_0_avalon_slave_read;                 // mm_interconnect_0:camera_controller_0_avalon_slave_read -> camera_controller_0:read
+	wire         mm_interconnect_0_camera_controller_0_avalon_slave_write;                // mm_interconnect_0:camera_controller_0_avalon_slave_write -> camera_controller_0:write
+	wire  [31:0] mm_interconnect_0_camera_controller_0_avalon_slave_writedata;            // mm_interconnect_0:camera_controller_0_avalon_slave_writedata -> camera_controller_0:writedata
 	wire  [31:0] mm_interconnect_0_cmos_sensor_output_generator_0_avalon_slave_readdata;  // cmos_sensor_output_generator_0:rddata -> mm_interconnect_0:cmos_sensor_output_generator_0_avalon_slave_readdata
 	wire   [2:0] mm_interconnect_0_cmos_sensor_output_generator_0_avalon_slave_address;   // mm_interconnect_0:cmos_sensor_output_generator_0_avalon_slave_address -> cmos_sensor_output_generator_0:addr
 	wire         mm_interconnect_0_cmos_sensor_output_generator_0_avalon_slave_read;      // mm_interconnect_0:cmos_sensor_output_generator_0_avalon_slave_read -> cmos_sensor_output_generator_0:read
@@ -132,15 +141,6 @@ module soc_system (
 	wire   [1:0] mm_interconnect_0_pio_leds_s1_address;                                   // mm_interconnect_0:pio_leds_s1_address -> pio_leds:address
 	wire         mm_interconnect_0_pio_leds_s1_write;                                     // mm_interconnect_0:pio_leds_s1_write -> pio_leds:write_n
 	wire  [31:0] mm_interconnect_0_pio_leds_s1_writedata;                                 // mm_interconnect_0:pio_leds_s1_writedata -> pio_leds:writedata
-	wire  [31:0] mm_interconnect_0_address_span_extender_0_windowed_slave_readdata;       // address_span_extender_0:avs_s0_readdata -> mm_interconnect_0:address_span_extender_0_windowed_slave_readdata
-	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_waitrequest;    // address_span_extender_0:avs_s0_waitrequest -> mm_interconnect_0:address_span_extender_0_windowed_slave_waitrequest
-	wire  [25:0] mm_interconnect_0_address_span_extender_0_windowed_slave_address;        // mm_interconnect_0:address_span_extender_0_windowed_slave_address -> address_span_extender_0:avs_s0_address
-	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_read;           // mm_interconnect_0:address_span_extender_0_windowed_slave_read -> address_span_extender_0:avs_s0_read
-	wire   [3:0] mm_interconnect_0_address_span_extender_0_windowed_slave_byteenable;     // mm_interconnect_0:address_span_extender_0_windowed_slave_byteenable -> address_span_extender_0:avs_s0_byteenable
-	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_readdatavalid;  // address_span_extender_0:avs_s0_readdatavalid -> mm_interconnect_0:address_span_extender_0_windowed_slave_readdatavalid
-	wire         mm_interconnect_0_address_span_extender_0_windowed_slave_write;          // mm_interconnect_0:address_span_extender_0_windowed_slave_write -> address_span_extender_0:avs_s0_write
-	wire  [31:0] mm_interconnect_0_address_span_extender_0_windowed_slave_writedata;      // mm_interconnect_0:address_span_extender_0_windowed_slave_writedata -> address_span_extender_0:avs_s0_writedata
-	wire   [6:0] mm_interconnect_0_address_span_extender_0_windowed_slave_burstcount;     // mm_interconnect_0:address_span_extender_0_windowed_slave_burstcount -> address_span_extender_0:avs_s0_burstcount
 	wire         address_span_extender_0_expanded_master_waitrequest;                     // mm_interconnect_1:address_span_extender_0_expanded_master_waitrequest -> address_span_extender_0:avm_m0_waitrequest
 	wire  [31:0] address_span_extender_0_expanded_master_readdata;                        // mm_interconnect_1:address_span_extender_0_expanded_master_readdata -> address_span_extender_0:avm_m0_readdata
 	wire  [31:0] address_span_extender_0_expanded_master_address;                         // address_span_extender_0:avm_m0_address -> mm_interconnect_1:address_span_extender_0_expanded_master_address

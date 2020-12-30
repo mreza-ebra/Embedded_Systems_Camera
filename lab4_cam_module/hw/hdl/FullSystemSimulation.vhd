@@ -1,6 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
+use work.cmos_sensor_output_generator_constants.all;
 entity FullSystem is
     --Takes as input the FVAL, RVAL, PIXCLK and DATA signals from the camera module, 
     --Outputs the debayerised data and an acknowledge signal
@@ -19,10 +20,10 @@ entity FullSystem is
         MasterOutput: out std_logic_vector(31 downto 0);	
 	    --word32count: out STD_LOGIC_VECTOR (8 DOWNTO 0);
         empty: out std_logic;
-	-- master signals
-	write_master : out std_logic;
-	WaitReq : in std_logic;
-	BurstCount : out std_logic_vector(7 downto 0)
+        -- master signals
+        write_master : out std_logic;
+        WaitReq : in std_logic;
+        BurstCount : out std_logic_vector(7 downto 0)
     );
 
 end FullSystem;

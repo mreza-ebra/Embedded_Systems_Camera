@@ -1068,9 +1068,9 @@
    kind="avalon"
    version="18.1"
    start="camera_controller_0.avalon_master"
-   end="camera_controller_0.avalon_slave">
+   end="address_span_extender_0.windowed_slave">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x10000840" />
+  <parameter name="baseAddress" value="0x0000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection

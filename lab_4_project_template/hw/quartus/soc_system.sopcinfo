@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="soc_system" kind="soc_system" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2020.12.27.16:14:30 -->
+ <!-- 2020.12.29.17:54:10 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1609082069</value>
+  <value>1609260849</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -1927,12 +1927,20 @@ parameters are a RESULT of the module parameters. -->
     <role>write</role>
    </port>
    <memoryBlock>
+    <isBridge>true</isBridge>
+    <moduleName>address_span_extender_0</moduleName>
+    <slaveName>windowed_slave</slaveName>
+    <name>address_span_extender_0.windowed_slave</name>
+    <baseAddress>0</baseAddress>
+    <span>268435456</span>
+   </memoryBlock>
+   <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>camera_controller_0</moduleName>
-    <slaveName>avalon_slave</slaveName>
-    <name>camera_controller_0.avalon_slave</name>
-    <baseAddress>268437568</baseAddress>
-    <span>32</span>
+    <moduleName>hps_0_bridges</moduleName>
+    <slaveName>f2h_sdram0_data</slaveName>
+    <name>hps_0_bridges.f2h_sdram0_data</name>
+    <baseAddress>0</baseAddress>
+    <span>268435456</span>
    </memoryBlock>
   </interface>
   <interface name="clock_sink" kind="clock_sink" version="18.1">
@@ -87570,11 +87578,11 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>interrupt_sender</endConnectionPoint>
  </connection>
  <connection
-   name="camera_controller_0.avalon_master/camera_controller_0.avalon_slave"
+   name="camera_controller_0.avalon_master/address_span_extender_0.windowed_slave"
    kind="avalon"
    version="18.1"
    start="camera_controller_0.avalon_master"
-   end="camera_controller_0.avalon_slave">
+   end="address_span_extender_0.windowed_slave">
   <parameter name="arbitrationPriority">
    <type>int</type>
    <value>1</value>
@@ -87585,7 +87593,7 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <parameter name="baseAddress">
    <type>java.math.BigInteger</type>
-   <value>0x10000840</value>
+   <value>0x0000</value>
    <derived>false</derived>
    <enabled>true</enabled>
    <visible>true</visible>
@@ -87617,8 +87625,8 @@ parameters are a RESULT of the module parameters. -->
   </parameter>
   <startModule>camera_controller_0</startModule>
   <startConnectionPoint>avalon_master</startConnectionPoint>
-  <endModule>camera_controller_0</endModule>
-  <endConnectionPoint>avalon_slave</endConnectionPoint>
+  <endModule>address_span_extender_0</endModule>
+  <endConnectionPoint>windowed_slave</endConnectionPoint>
  </connection>
  <connection
    name="nios2_gen2_0.data_master/jtag_uart_0.avalon_jtag_slave"

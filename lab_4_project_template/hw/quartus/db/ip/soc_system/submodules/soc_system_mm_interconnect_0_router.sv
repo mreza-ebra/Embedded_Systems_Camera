@@ -47,7 +47,7 @@ module soc_system_mm_interconnect_0_router_default_decode
      parameter DEFAULT_CHANNEL = 0,
                DEFAULT_WR_CHANNEL = -1,
                DEFAULT_RD_CHANNEL = -1,
-               DEFAULT_DESTID = 1 
+               DEFAULT_DESTID = 0 
    )
   (output [101 - 99 : 0] default_destination_id,
    output [7-1 : 0] default_wr_channel,
@@ -134,13 +134,13 @@ module soc_system_mm_interconnect_0_router
     // Figure out the number of bits to mask off for each slave span
     // during address decoding
     // -------------------------------------------------------
-    localparam PAD0 = log2ceil(64'h10000860 - 64'h10000840); 
+    localparam PAD0 = log2ceil(64'h10000000 - 64'h0); 
     // -------------------------------------------------------
     // Work out which address bits are significant based on the
     // address range of the slaves. If the required width is too
     // large or too small, we use the address field width instead.
     // -------------------------------------------------------
-    localparam ADDR_RANGE = 64'h10000860;
+    localparam ADDR_RANGE = 64'h10000000;
     localparam RANGE_ADDR_WIDTH = log2ceil(ADDR_RANGE);
     localparam OPTIMIZED_ADDR_H = (RANGE_ADDR_WIDTH > PKT_ADDR_W) ||
                                   (RANGE_ADDR_WIDTH == 0) ?
@@ -184,9 +184,9 @@ module soc_system_mm_interconnect_0_router
         // --------------------------------------------------
            
          
-          // ( 10000840 .. 10000860 )
+          // ( 0 .. 10000000 )
           src_channel = 7'b1;
-          src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
+          src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
 	     
         
 
