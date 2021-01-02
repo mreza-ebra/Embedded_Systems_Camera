@@ -6,7 +6,7 @@ JedecChain;
 	P ActionCode(Ign)
 		Device PartName(SOCVHPS) MfrSpec(OpMask(0));
 	P ActionCode(Cfg)
-		Device PartName(5CSEMA4U23) Path("C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab_4_compiled_top_level/hw/quartus/output_files/") File("ES_mini_project_TRDB_D5M_LT24_time_limited.sof") MfrSpec(OpMask(1));
+		Device PartName(5CSEMA4U23) Path("C:/Users/HP/Desktop/CS473/Embedded_Systems_Camera/lab_4_camera/hw/quartus/output_files/") File("ES_mini_project_TRDB_D5M_LT24_time_limited.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

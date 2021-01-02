@@ -1,5 +1,5 @@
 Flow report for ES_mini_project_TRDB_D5M_LT24
-Sat Jan 02 13:19:27 2021
+Sat Jan 02 15:52:01 2021
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Sat Jan 02 13:18:30 2021       ;
+; Flow Status                     ; Successful - Sat Jan 02 15:50:11 2021       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; ES_mini_project_TRDB_D5M_LT24               ;
 ; Top-level Entity Name           ; DE0_Nano_SoC_TRDB_D5M_LT24_top_level        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA4U23C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 2,213 / 15,880 ( 14 % )                     ;
-; Total registers                 ; 3591                                        ;
+; Logic utilization (in ALMs)     ; 2,202 / 15,880 ( 14 % )                     ;
+; Total registers                 ; 3593                                        ;
 ; Total pins                      ; 151 / 314 ( 48 % )                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 1,147,008 / 2,764,800 ( 41 % )              ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+-------------------------------+
 ; Option            ; Setting                       ;
 +-------------------+-------------------------------+
-; Start date & time ; 01/02/2021 13:11:11           ;
+; Start date & time ; 01/02/2021 15:35:40           ;
 ; Main task         ; Compilation                   ;
 ; Revision Name     ; ES_mini_project_TRDB_D5M_LT24 ;
 +-------------------+-------------------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------+----------------------------------------+-------------------------------+--------------------------------------+------------+
 ; Assignment Name                       ; Value                                  ; Default Value                 ; Entity Name                          ; Section Id ;
 +---------------------------------------+----------------------------------------+-------------------------------+--------------------------------------+------------+
-; COMPILER_SIGNATURE_ID                 ; 88491853262093.160958946714476         ; --                            ; --                                   ; --         ;
+; COMPILER_SIGNATURE_ID                 ; 53744836841343.160959813507432         ; --                            ; --                                   ; --         ;
 ; ECO_REGENERATE_REPORT                 ; On                                     ; Off                           ; --                                   ; --         ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                                     ; --                            ; --                                   ; --         ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                                      ; --                            ; --                                   ; --         ;
@@ -98,11 +98,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:03:49     ; 1.0                     ; 5266 MB             ; 00:05:41                           ;
-; Fitter               ; 00:03:01     ; 1.2                     ; 7163 MB             ; 00:07:33                           ;
-; Assembler            ; 00:00:13     ; 1.0                     ; 4920 MB             ; 00:00:13                           ;
-; Timing Analyzer      ; 00:00:54     ; 1.4                     ; 5642 MB             ; 00:01:16                           ;
-; Total                ; 00:07:57     ; --                      ; --                  ; 00:14:43                           ;
+; Analysis & Synthesis ; 00:06:30     ; 1.0                     ; 5247 MB             ; 00:07:22                           ;
+; Fitter               ; 00:07:01     ; 1.1                     ; 6775 MB             ; 00:10:00                           ;
+; Assembler            ; 00:00:23     ; 1.0                     ; 4922 MB             ; 00:00:19                           ;
+; Timing Analyzer      ; 00:01:46     ; 1.2                     ; 5590 MB             ; 00:01:47                           ;
+; Total                ; 00:15:40     ; --                      ; --                  ; 00:19:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,10 +111,10 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-6AT9NEU  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-6AT9NEU  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-6AT9NEU  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-6AT9NEU  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; Karim-HP         ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; Karim-HP         ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; Karim-HP         ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; Karim-HP         ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

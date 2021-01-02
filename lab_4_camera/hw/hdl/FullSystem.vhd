@@ -22,9 +22,9 @@ entity FullSystem is
         BurstCount : out std_logic_vector(7 downto 0);
         MemAddr : OUT STD_LOGIC_VECTOR(31 downto 0); -- starting address of buffer
 		  
-		  -- Outputs for camera
-		  cam_reset_n : out std_logic;
-		  cam_trigger : out std_logic;
+		-- Outputs for camera
+		cam_reset_n : out std_logic;
+		cam_trigger : out std_logic;
 		  
         --Inputs
         PIXCLK : in std_logic;
@@ -240,7 +240,7 @@ begin
                     when "001" => LengthAddress <= writedata;
                     when "010" => ModuleStatus(0) <= writedata(0);
 						  when "011" => ModuleStatus(5) <= writedata(0);
-						  when "110" => ModuleStatus(6) <= writedata(0);
+						  when "100" => ModuleStatus(6) <= writedata(0);
                     when others => null;
                 end case;
 				else		

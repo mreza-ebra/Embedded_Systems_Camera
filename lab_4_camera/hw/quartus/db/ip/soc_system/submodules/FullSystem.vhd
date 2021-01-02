@@ -240,7 +240,7 @@ begin
                     when "001" => LengthAddress <= writedata;
                     when "010" => ModuleStatus(0) <= writedata(0);
 						  when "011" => ModuleStatus(5) <= writedata(0);
-						  when "110" => ModuleStatus(6) <= writedata(0);
+						  when "100" => ModuleStatus(6) <= writedata(0);
                     when others => null;
                 end case;
 				else		
