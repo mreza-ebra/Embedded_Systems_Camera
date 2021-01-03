@@ -10,7 +10,7 @@ entity FullSystem is
 
         -- Internal interface (i.e. Avalon slave).
         address : in std_logic_vector(2 downto 0);
-		  write : in std_logic;
+		write : in std_logic;
         read : in std_logic;
         writedata : in std_logic_vector(31 downto 0);
         readdata : out std_logic_vector(31 downto 0);

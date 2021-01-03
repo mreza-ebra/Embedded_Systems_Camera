@@ -14,7 +14,14 @@ entity FullSystemSimulationTDR5 is
 		write : in std_logic;
         read : in std_logic;
         writedata : in std_logic_vector(31 downto 0);
-        readdata : out std_logic_vector(31 downto 0)	  
+		readdata : out std_logic_vector(31 downto 0);
+		
+		MasterOutput : out std_logic_vector(31 downto 0);
+		write_master : out std_logic;
+		WaitReq : in std_logic;
+		BurstCount : out std_logic_vector(7 downto 0);
+        MemAddr : OUT STD_LOGIC_VECTOR(31 downto 0) -- starting address of buffer
+        	  
     );
 
 end FullSystemSimulationTDR5;
@@ -39,14 +46,12 @@ architecture Testing of FullSystemSimulationTDR5 is
 	 signal ReadFifo : std_logic;
 	 signal FifoData : std_logic_vector(31 downto 0);
      signal FifoWords : std_logic_vector(7 downto 0);
-	 constant CBURST : positive := 32; -- with each burst transfer we save 64 pixels to the memory
+	 constant CBURST : positive := 4; -- with each burst transfer we save 64 pixels to the memory
      --register signals
      signal StartAddress : std_logic_vector(31 downto 0);-- we can use 0 as the starting address for the first frame
      signal LengthAddress : std_logic_vector(31 downto 0); -- each burst transfers 64 pixels and we have 320*240 = 76800 pixels in total => we need 1200 bursts for one frame
-     signal ModuleStatus : std_logic_vector(31 downto 0);-- := x"00000000";
-	  signal done : std_logic;
-
-
+     signal ModuleStatus : std_logic_vector(31 downto 0);-- := x"00000000"
+     signal done : std_logic;
         --Add the CMOS simulator
         component cmos_sensor_output_generator is
         generic(
@@ -148,6 +153,37 @@ architecture Testing of FullSystemSimulationTDR5 is
 			wrfull		: OUT STD_LOGIC 
 		);
 	end component FIFO_16512_DC;
+
+component Avalon_Master is
+
+    generic(CBURST : positive := 4); -- burst count generic value is 32
+ 
+    Port(
+        clk : IN STD_LOGIC ;
+        Reset : IN STD_LOGIC ;
+
+    -- signals coming from the slave
+        StartAddr : IN STD_LOGIC_VECTOR(31 downto 0); -- the starting address of the data in the correct buffer
+        WaitReq : IN STD_LOGIC; -- if slave keeps this activated, we don't transer anything (or bus)
+		Length : IN STD_LOGIC_VECTOR(31 downto 0);
+		Start : IN STD_LOGIC;
+		-- AVM_rddata : IN STD_LOGIC_VECTOR(31 downto 0);
+		-- AVM_read : IN : std_logic;
+
+    -- Signals and data coming from second FIFO
+        FifoData : IN STD_LOGIC_VECTOR(31 downto 0); -- we read 32 bits from FIFO
+        FifoWords : IN STD_LOGIC_VECTOR(7 downto 0);
+
+    -- Avalon Master outputs
+        MemAddr : OUT STD_LOGIC_VECTOR(31 downto 0); -- starting address of buffer
+        write_master : OUT STD_LOGIC;
+        MasterWriteData : OUT STD_LOGIC_VECTOR(31 downto 0); -- we write_master 32 bit data with burst transfer
+		BurstCount : OUT STD_LOGIC_VECTOR(7 downto 0);
+		ReadFifo : OUT STD_LOGIC; -- should be connected to rdreq of the FIFO
+		done_frame : OUT STD_LOGIC
+    ) ;
+
+end component Avalon_Master;
  
 
 begin
@@ -204,6 +240,22 @@ begin
              wrfull=>open, 
              rdusedw=>FifoWords);
     
+	MasterUnit: Avalon_Master 
+    generic map (CBURST=>CBURST)
+    port map(clk=>clk, 
+             Reset=>Reset,
+             FifoWords=>FifoWords, 
+             StartAddr=>StartAddress, 
+             Length=>LengthAddress, 
+             Start=>ModuleStatus(0), 
+             MasterWriteData=>MasterOutput, 
+             ReadFifo=>ReadFifo, 
+             write_master=>write_master, 
+             BurstCount=>BurstCount, 
+             WaitReq=>WaitReq, 
+             FifoData => FifoData,
+             MemAddr => MemAddr, 
+             done_frame=>done);
     
     -- Avalon slave write to registers.
     process(clk, Reset)

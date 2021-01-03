@@ -25,7 +25,7 @@ architecture sim of FullSystemTestBench is
     signal write       :  std_logic;
     signal rddata      :  std_logic_vector(CMOS_SENSOR_OUTPUT_GENERATOR_MM_S_DATA_WIDTH - 1 downto 0);
     signal wrdata      :  std_logic_vector(CMOS_SENSOR_OUTPUT_GENERATOR_MM_S_DATA_WIDTH - 1 downto 0);
-
+	signal write_master : std_logic;
 	--Outputs
 	signal frame_valid : std_logic;
     signal line_valid  : std_logic;
@@ -33,6 +33,9 @@ architecture sim of FullSystemTestBench is
     signal MasterOutput : std_logic_vector(31 downto 0);	
     signal word32count: STD_LOGIC_VECTOR (8 DOWNTO 0);
     signal empty: std_logic;
+	signal BurstCount : std_logic_vector(7 downto 0);
+	signal MemAddr : std_logic_vector(31 downto 0);
+	signal WaitReq : std_logic:='0';
 
 begin 
 
@@ -45,7 +48,12 @@ begin
 			 read => read,
 			 write => write,
 			 readdata => rddata,
-             writedata => wrdata);
+             writedata => wrdata,
+	     MasterOutput => MasterOutput,
+		write_master => write_master,
+		WaitReq => WaitReq,
+		BurstCount => BurstCount,
+        	MemAddr => MemAddr);
 	
 	--Generate clk signal
 	clk_generation: process

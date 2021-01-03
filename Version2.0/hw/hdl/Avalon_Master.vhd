@@ -93,9 +93,11 @@ Begin
 					nxt_state <= wait_fifo;
 					nxt_bursts_completed <= (others => '0');
 					nxt_first_burst <= '1';
+					done_frame <= '0';
 				end if;
 
 			when wait_fifo =>
+				ReadFifo <= '0';
 				if unsigned(FifoWords) >= CBURST then
 					nxt_state <= mid_burst;
 					if is_first_burst = '1' then
@@ -111,7 +113,7 @@ Begin
 				if WaitReq = '0' then
 					if current_cnt = CBURST-1 then
 						nxt_state <= wait_fifo;
-						ReadFifo <= '0';
+						ReadFifo <= '1';
 						nxt_bursts_completed <= bursts_completed + 1;
 						if bursts_completed = unsigned(Length) - 1 then
 							done_frame <= '1';

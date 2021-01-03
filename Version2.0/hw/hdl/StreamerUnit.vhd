@@ -123,6 +123,7 @@ begin
                 if RVAL = '0' then
                     next_state <= wait_pixel; --end of row
                     next_fifo_add <= '1';
+                    write_request1 <='0';
                 end if;
             when write_fifo_2 =>
                 --actions when idle (OFL)
@@ -131,6 +132,7 @@ begin
                 if RVAL = '0' then
                     next_state <= wait_pixel; --end of row
                     next_fifo_add <= '0'; --set the address to the next fifo
+                    write_request2 <= '0';
                 end if;
         end case;
     end process;
@@ -181,15 +183,3 @@ begin
         end case;
     end process;
 end architecture;
-
-
-
-
-
-
-
-
-
-
-
-            

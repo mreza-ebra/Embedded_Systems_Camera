@@ -41,11 +41,12 @@ Begin
 			
         elsif rising_edge(clk) then
 			if ReadyDebayer = '1' then
-				for i in 1 to 14 loop
-					CvtData(i) <= OrgData(2*i+2) or OrgData(2*i+3);
-				end loop;
-				CvtData(0) <= OrgData(0) or OrgData(1) or OrgData(2) or OrgData(3);
-				CvtData(15) <= OrgData(32) or OrgData(33) or OrgData(34) or OrgData(35);
+				--CvtData(4 downto 0) <= OrgData(11 downto 7);
+				--CvtData(10 downto 5) <= OrgData(23 downto 18);
+				--CvtData(15 downto 11) <= OrgData(35 downto 31);
+				CvtData(4 downto 0) <= OrgData(4 downto 0);
+				CvtData(10 downto 5) <= OrgData(17 downto 12);
+				CvtData(15 downto 11) <= OrgData(28 downto 24);
 				ReadyOutColor <= '1';
 			else 
 				ReadyOutColor <= '0'; 
