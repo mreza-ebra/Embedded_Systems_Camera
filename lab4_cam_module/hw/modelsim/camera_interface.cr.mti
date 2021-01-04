@@ -1,0 +1,116 @@
+C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/FullSystemTestBench.vhd {0 {vcom -work work -2002 -explicit -stats=none {C:\Users\craio\Documents\git\Embedded_Systems_Camera\lab4_cam_module\hw\testbench\FullSystemTestBench.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package cmos_sensor_output_generator_constants
+-- Compiling entity FullSystemTestBench
+-- Compiling architecture sim of FullSystemTestBench
+** Error: (vcom-11) Could not find work.fullsystemsimulation.
+** Error (suppressible): C:\Users\craio\Documents\git\Embedded_Systems_Camera\lab4_cam_module\hw\testbench\FullSystemTestBench.vhd(45): (vcom-1195) Cannot find expanded name "work.FullSystemSimulation".
+** Error: C:\Users\craio\Documents\git\Embedded_Systems_Camera\lab4_cam_module\hw\testbench\FullSystemTestBench.vhd(45): Unknown expanded name.
+** Error: C:\Users\craio\Documents\git\Embedded_Systems_Camera\lab4_cam_module\hw\testbench\FullSystemTestBench.vhd(76): Illegal target for signal assignment.
+** Error: C:\Users\craio\Documents\git\Embedded_Systems_Camera\lab4_cam_module\hw\testbench\FullSystemTestBench.vhd(76): (vcom-1136) Unknown identifier "clk2".
+** Error: C:\Users\craio\Documents\git\Embedded_Systems_Camera\lab4_cam_module\hw\testbench\FullSystemTestBench.vhd(78): Illegal target for signal assignment.
+** Error: C:\Users\craio\Documents\git\Embedded_Systems_Camera\lab4_cam_module\hw\testbench\FullSystemTestBench.vhd(78): (vcom-1136) Unknown identifier "clk2".
+** Error: C:\Users\craio\Documents\git\Embedded_Systems_Camera\lab4_cam_module\hw\testbench\FullSystemTestBench.vhd(172): VHDL Compiler exiting
+
+} {11.0 12.0 13.0 19.0} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/camera_controller/hw/hdl/FullSystemSimulation.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/camera_controller/hw/hdl/FullSystemSimulation.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package cmos_sensor_output_generator_constants
+-- Compiling entity FullSystem
+-- Compiling architecture Testing of FullSystem
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/camera_controller/hw/hdl/Color_Converter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/camera_controller/hw/hdl/Color_Converter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Color_Converter
+-- Compiling architecture Comp of Color_Converter
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/tb_color_converter.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/testbench/tb_color_converter.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity tb_color_converter
+-- Compiling architecture test of tb_color_converter
+-- Loading entity Color_Converter
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Streamer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Streamer
+-- Compiling architecture Stream of Streamer
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator_constants.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package MATH_REAL
+-- Compiling package cmos_sensor_output_generator_constants
+-- Compiling package body cmos_sensor_output_generator_constants
+-- Loading package cmos_sensor_output_generator_constants
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/FIFO24320.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FIFO24320
+-- Compiling architecture SYN of fifo24320
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/camera_controller/hw/hdl/Avalon_Master.vhd {1 {vcom -work work -2002 -explicit -stats=none {C:\Users\craio\Documents\git\Embedded_Systems_Camera\camera_controller\hw\hdl\Avalon_Master.vhd}
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Compiling entity Avalon_Master
+-- Compiling architecture Comp of Avalon_Master
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/cmos_sensor_output_generator.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package MATH_REAL
+-- Loading package cmos_sensor_output_generator_constants
+-- Compiling entity cmos_sensor_output_generator
+-- Compiling architecture rtl of cmos_sensor_output_generator
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/lab4_cam_module/hw/hdl/Debayer.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Loading package NUMERIC_STD
+-- Loading package std_logic_arith
+-- Loading package STD_LOGIC_UNSIGNED
+-- Compiling entity Debayer
+-- Compiling architecture Debayrization of Debayer
+
+} {} {}} C:/Users/craio/Documents/git/Embedded_Systems_Camera/camera_controller/hw/hdl/FIFO_16512_DC.vhd {1 {vcom -work work -2002 -explicit -stats=none C:/Users/craio/Documents/git/Embedded_Systems_Camera/camera_controller/hw/hdl/FIFO_16512_DC.vhd
+Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+-- Loading package STANDARD
+-- Loading package TEXTIO
+-- Loading package std_logic_1164
+-- Compiling entity FIFO_16512_DC
+-- Compiling architecture SYN of fifo_16512_dc
+
+} {} {}}

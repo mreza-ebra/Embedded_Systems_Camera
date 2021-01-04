@@ -22,9 +22,9 @@ entity FullSystem is
         BurstCount : out std_logic_vector(7 downto 0);
         MemAddr : OUT STD_LOGIC_VECTOR(31 downto 0); -- starting address of buffer
 		  
-		  -- Outputs for camera
-		  cam_reset_n : out std_logic;
-		  cam_trigger : out std_logic;
+		-- Outputs for camera
+		cam_reset_n : out std_logic;
+		cam_trigger : out std_logic;
 		  
         --Inputs
         PIXCLK : in std_logic;

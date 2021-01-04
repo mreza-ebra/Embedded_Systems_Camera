@@ -9,7 +9,7 @@ use ieee.numeric_std.all;
 
 Entity Avalon_Master is
 
-    generic(CBURST : positive := 4); -- burst count generic value is 32
+    generic(CBURST : positive := 32); -- burst count generic value is 32
  
     Port(
         clk : IN STD_LOGIC ;
@@ -93,9 +93,13 @@ Begin
 					nxt_state <= wait_fifo;
 					nxt_bursts_completed <= (others => '0');
 					nxt_first_burst <= '1';
+					done_frame <= '0';
+				else 
+					nxt_state <= idle;
 				end if;
 
 			when wait_fifo =>
+				ReadFifo <= '0';
 				if unsigned(FifoWords) >= CBURST then
 					nxt_state <= mid_burst;
 					if is_first_burst = '1' then
@@ -111,11 +115,12 @@ Begin
 				if WaitReq = '0' then
 					if current_cnt = CBURST-1 then
 						nxt_state <= wait_fifo;
-						ReadFifo <= '0';
+						ReadFifo <= '1';
 						nxt_bursts_completed <= bursts_completed + 1;
 						if bursts_completed = unsigned(Length) - 1 then
 							done_frame <= '1';
 							nxt_state <= idle;
+							nxt_first_burst <= '1';
 						end if;
 					elsif current_cnt < CBURST then
 						nxt_cnt <= current_cnt + 1;
